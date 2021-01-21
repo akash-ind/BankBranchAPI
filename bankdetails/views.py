@@ -10,18 +10,6 @@ from django.db.models import Q
 import json
 import os
 
-def import_data(request):
-    data = json.load(open(os.path.join(settings.BASE_DIR, "convertcsv.json")))
-    data.sort(key=lambda x: x['bank_id'])
-    i = 0
-    for d in data:
-        ob, _ = Bank.objects.get_or_create(name=d["bank_name"])
-        d['bank_id'] = ob
-        d.pop('bank_name')
-        Branch.objects.get_or_create(**d)
-        print(i)
-        i+=1
-    return HttpResponse("Done")
 
 
 class ListBranch(ListAPIView):

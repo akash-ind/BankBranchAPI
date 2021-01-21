@@ -2,7 +2,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('data/', views.import_data),
     path('branches/autocomplete', views.ListBranch.as_view(), name="list-branch"), 
     path("branches", views.SearchBranch.as_view(), name="search-branch"),
     path("branches/city", views.SearchBranchCity.as_view(), name="search-branch-city"),
