@@ -88,10 +88,10 @@ if os.environ.get('production', False):
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': "bank",
+            'NAME': "bccpkitkttzxfdmhsttf",
             'USER': os.environ.get('user'),
             'PASSWORD': os.environ.get('password'),
-            'HOST': "SG-bankdb-1610-pgsql-master.servers.mongodirector.com",   # Or an IP Address that your DB is hosted on
+            'HOST': "bccpkitkttzxfdmhsttf-postgresql.services.clever-cloud.com",
             'PORT': '5432',
         }
     }
@@ -99,7 +99,7 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': "BankDetails",
+            'NAME': "BankProject",
             'USER': "akash",
             'PASSWORD': "akashgupta",
             'HOST': "localhost",   # Or an IP Address that your DB is hosted on
